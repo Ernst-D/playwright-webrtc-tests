@@ -9,6 +9,7 @@ const pathToVideo = path.resolve("akiyo_cif.y4m");
 
 const config: PlaywrightTestConfig = {
   forbidOnly: !!process.env.CI,
+  timeout:120000,
   retries: process.env.CI ? 2 : 0,
   use: {
     trace: "on",
